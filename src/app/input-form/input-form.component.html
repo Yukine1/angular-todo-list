@@ -1,0 +1,21 @@
+<div>
+  <!-- <span *ngIf="!task.valid && task.touched">Please enter a valid task!</span> -->
+  <form (ngSubmit)="onSubmit()" class="input-form">
+    <input
+      [class]="[
+        'todo-input',
+        !task.valid && task.touched
+          ? 'todo-input__incorrect'
+          : 'todo-input__correct'
+      ]"
+      type="text"
+      id="todoTask"
+      [formControl]="task"
+      [placeholder]="
+        !task.valid && task.touched
+          ? 'Please enter a valid task!'
+          : 'What needs to be done...'
+      "
+    />
+  </form>
+</div>
