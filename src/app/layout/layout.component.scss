@@ -1,0 +1,30 @@
+@import "../../styles/abstracts//variables";
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 70%;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+}
+
+.header {
+  color: $header-color-primary;
+  font-size: $header-font-size;
+  line-height: 1.4;
+  font-weight: 200;
+  padding: $default-padding;
+}
+
+.main {
+  // background-color: cadetblue;
+  width: 50%;
+  padding: $default-padding;
+}
+
+.footer {
+  // background-color: coral;
+  padding: $default-padding;
+}
