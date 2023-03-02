@@ -1,3 +1,4 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -9,6 +10,12 @@ import { MainComponent } from './layout/main/main.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { InputFormComponent } from './input-form/input-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TodosComponent } from './todos/todos.component';
+import { TodoComponent } from './todos/todo/todo.component';
+import { TodosService } from './todos/todos.service';
+import { HttpClientModule } from '@angular/common/http';
+import { DataStorageService } from './shared/data-storage.service';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -18,9 +25,18 @@ import { ReactiveFormsModule } from '@angular/forms';
     MainComponent,
     FooterComponent,
     InputFormComponent,
+    TodosComponent,
+    TodoComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
-  providers: [],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+  ],
+  providers: [TodosService, DataStorageService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

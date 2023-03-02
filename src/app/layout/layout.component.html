@@ -1,3 +1,19 @@
+<div *ngIf="deleteStatus" class="modalWindow">
+  <div class="modalWindow__content">
+    <p class="modalWindow__content__title">Delete task</p>
+    <p class="modalWindow__content__confirmation-message">
+      Are you sure you want to delete this task?
+    </p>
+    <div class="btn-container">
+      <button class="btn-container__cancel" (click)="onDelete()">
+        Confirm
+      </button>
+      <button class="btn-container__confirm" (click)="onCloseModal()">
+        Cancel
+      </button>
+    </div>
+  </div>
+</div>
 <div class="layout">
   <app-header class="header" title="Todo List"></app-header>
   <app-main class="main"></app-main>
