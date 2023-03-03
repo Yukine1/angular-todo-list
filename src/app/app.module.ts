@@ -16,6 +16,7 @@ import { TodosService } from './todos/todos.service';
 import { HttpClientModule } from '@angular/common/http';
 import { DataStorageService } from './shared/data-storage.service';
 import { MaterialModule } from './material.module';
+import { SpinerComponent } from './spiner/spiner.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { MaterialModule } from './material.module';
     InputFormComponent,
     TodosComponent,
     TodoComponent,
+    SpinerComponent,
   ],
   imports: [
     BrowserModule,
