@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { TodosService } from '../todos/todos.service';
 
 @Component({
   selector: 'app-input-form',
@@ -7,9 +8,17 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./input-form.component.scss'],
 })
 export class InputFormComponent {
-  task = new FormControl('', [Validators.required, Validators.max(6)]);
+  inputForm = new FormGroup({
+    text: new FormControl('', [Validators.required, Validators.minLength(4)]),
+  });
+
+  constructor(private todosService: TodosService) {}
 
   onSubmit() {
-    console.log(this.task);
+    const todoText = this.inputForm.get('text')?.value;
+    if (todoText) {
+      this.todosService.addTodo(todoText);
+      this.inputForm.get('text')?.setValue('');
+    }
   }
 }

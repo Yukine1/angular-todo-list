@@ -1,1 +1,6 @@
-<div><app-input-form></app-input-form></div>
+<app-spiner *ngIf="todos.length === 0"></app-spiner>
+<ng-template [ngIf]="todos">
+  <div class="main">
+    <app-input-form></app-input-form><app-todos></app-todos>
+  </div>
+</ng-template>

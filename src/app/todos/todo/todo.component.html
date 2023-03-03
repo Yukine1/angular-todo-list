@@ -1,0 +1,37 @@
+<div [class]="['todo', editTodo ? 'todo__editing' : 'todo']">
+  <form *ngIf="editTodo" [formGroup]="inputForm" (ngSubmit)="onSubmit()">
+    <input
+      class="todo-input"
+      type="text"
+      id="todoTask"
+      formControlName="text"
+      [placeholder]="todo?.text"
+      (blur)="onEdit()"
+      autoFocus
+      required
+    />
+  </form>
+  <ng-template [ngIf]="!editTodo">
+    <span
+      (dblclick)="onEdit()"
+      [class]="['task', todo?.done ? 'task__completed' : 'task__incompleted']"
+    >
+      {{ todo?.text }}
+    </span>
+  </ng-template>
+  <div class="actions">
+    <span (click)="onToggle()">
+      <mat-icon
+        [class]="['icon', todo?.done ? 'icon__completed' : 'icon__incompleted']"
+        aria-label="Todo icon"
+        >done</mat-icon
+      >
+    </span>
+    <span (click)="onEdit()">
+      <mat-icon class="icon" aria-label="Todo icon">edit</mat-icon>
+    </span>
+    <span (click)="onDelete()">
+      <mat-icon class="icon" aria-label="Todo icon">delete</mat-icon>
+    </span>
+  </div>
+</div>

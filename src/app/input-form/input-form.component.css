@@ -1,0 +1,37 @@
+.input-form {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.todo-input {
+  border: none;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+  width: 100%;
+  padding: 12px 18px;
+  font-size: 26px;
+  color: inherit;
+  letter-spacing: 0.8px;
+}
+.todo-input:focus {
+  outline: none;
+}
+.todo-input__correct::-moz-placeholder {
+  color: #e9ecef;
+}
+.todo-input__correct:-ms-input-placeholder {
+  color: #e9ecef;
+}
+.todo-input__correct::placeholder {
+  color: #e9ecef;
+}
+.todo-input__incorrect::-moz-placeholder {
+  color: #ffe3e3;
+}
+.todo-input__incorrect:-ms-input-placeholder {
+  color: #ffe3e3;
+}
+.todo-input__incorrect::placeholder {
+  color: #ffe3e3;
+}/*# sourceMappingURL=input-form.component.css.map */
