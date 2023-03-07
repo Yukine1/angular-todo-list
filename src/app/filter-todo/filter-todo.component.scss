@@ -1,0 +1,59 @@
+@import "../../styles/abstracts/variables";
+
+.footer {
+  color: $footer-color-primary;
+  font-size: $footer-font-size;
+  line-height: 1.4;
+  font-weight: 100;
+  padding: 14px;
+  background-color: $footer-background-color;
+
+  &__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &-counter {
+      display: flex;
+      align-items: center;
+    }
+
+    &-btns {
+      display: flex;
+    }
+
+    &-btn {
+      font-size: 14px;
+      border: none;
+      outline: 1.6px solid $todo-color-completed;
+      border-radius: 4px;
+      padding: 4px 8px;
+      background-color: transparent;
+      transition: 0.2s;
+
+      &-active {
+        font-size: 14px;
+        border: none;
+        outline: 1.6px solid $todo-color-completed;
+        border-radius: 4px;
+        padding: 4px 8px;
+        transition: 0.2s;
+        background-color: #fbf5f5;
+        outline: 1.6px solid $footer-color-primary;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: #fbf5f5;
+        outline: 1.6px solid $footer-color-primary;
+      }
+    }
+
+    &-btn:not(:last-child) {
+      margin-right: 14px;
+    }
+    &-btn-active:not(:last-child) {
+      margin-right: 14px;
+    }
+  }
+}

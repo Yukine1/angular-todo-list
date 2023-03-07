@@ -1,6 +1,8 @@
-<app-spiner *ngIf="todos.length === 0"></app-spiner>
+<app-spiner *ngIf="todos.length < 1"></app-spiner>
 <ng-template [ngIf]="todos">
   <div class="main">
-    <app-input-form></app-input-form><app-todos></app-todos>
+    <app-input-form></app-input-form>
+    <app-todos></app-todos>
+    <app-filter-todo></app-filter-todo>
   </div>
 </ng-template>
