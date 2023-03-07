@@ -10,6 +10,7 @@ import { TodosService } from '../todos/todos.service';
 })
 export class FilterTodoComponent implements OnInit, OnDestroy {
   todosSub: Subscription = Subscription.EMPTY;
+  dbTodosSub: Subscription = Subscription.EMPTY;
   todos: Todo[] = [];
   doneTodos: Todo[] = [];
   status: string = 'All';
@@ -19,16 +20,14 @@ export class FilterTodoComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.todosSub = this.todosService.dbTodosChanged.subscribe((todos) => {
       this.todos = todos;
-      this.doneTodos = this.todos.filter((todo) => todo.done);
+    });
+    this.dbTodosSub = this.todosService.todosChanged.subscribe((dbTodos) => {
+      this.doneTodos = dbTodos.filter((todo) => todo.done);
     });
   }
 
   onClearCompleted() {
     this.todosService.clearCompletedTodos();
-  }
-
-  ngOnDestroy(): void {
-    this.todosSub.unsubscribe();
   }
 
   onSetAll() {
@@ -44,5 +43,10 @@ export class FilterTodoComponent implements OnInit, OnDestroy {
   onSetCompleted() {
     this.todosService.setCompletedTodos();
     this.status = 'Completed';
+  }
+
+  ngOnDestroy(): void {
+    this.todosSub.unsubscribe();
+    this.dbTodosSub.unsubscribe();
   }
 }

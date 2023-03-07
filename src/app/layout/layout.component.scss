@@ -21,11 +21,13 @@
 .main {
   min-width: 50%;
   font-weight: 100;
+  flex-grow: 1;
   padding: $main-padding;
 }
 
 .footer {
   min-width: 50%;
+  flex-shrink: 0;
   padding: $footer-padding;
 }
 
