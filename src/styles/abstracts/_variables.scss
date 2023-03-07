@@ -1,6 +1,9 @@
 // COLORS
-$header-color-primary: rgba(175, 47, 47, 0.15);
 $default-font-color: #4d4d4d;
+
+$header-color-primary: rgba(175, 47, 47, 0.15);
+
+$main-color-shadow: #dee2e6;
 
 $input-placeholder-color-incorrect: #ffe3e3;
 $input-placeholder-color-correct: #e9ecef;
@@ -8,17 +11,23 @@ $input-color-border-bottom: #dee2e6;
 $input-background-color: #f8f9fa;
 
 $todo-icon-color-completed: #20c997;
-
 $todo-color-completed: #b8b8b8;
 
-$main-color-shadow: #dee2e6;
+$footer-color-primary: #4d4d4d;
+$footer-background-color: #f8f9fa;
 
 $body-background-color: #f1f3f5;
 
 // FONTS, FONTS_SIZE
 $header-font-size: 64px;
+$footer-font-size: 14px;
 
 $default-font: "Helvetica Neue", sans-serif;
 
-// BASIC PADDING
-$default-padding: 14px;
+// PADDING
+
+$header-padding: 14px;
+
+$main-padding: 0 14px;
+
+$footer-padding: 0 14px 14px 14px;

@@ -1,4 +1,10 @@
-import { AfterViewChecked, Component, OnDestroy, OnInit } from '@angular/core';
+import {
+  AfterContentChecked,
+  AfterViewChecked,
+  Component,
+  OnDestroy,
+  OnInit,
+} from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Todo } from 'src/app/todos/todo.model';
 import { TodosService } from 'src/app/todos/todos.service';
@@ -13,8 +19,8 @@ export class MainComponent implements OnInit, OnDestroy {
   constructor(private todosService: TodosService) {}
 
   ngOnInit(): void {
-    this.todosSub = this.todosService.todosChanged.subscribe(
-      (todos) => (this.todos = todos)
+    this.todosSub = this.todosService.dbTodosChanged.subscribe(
+      (dbTodos) => (this.todos = dbTodos)
     );
   }
 

@@ -1,0 +1,50 @@
+.footer {
+  color: #4d4d4d;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 100;
+  padding: 14px;
+  background-color: #f8f9fa;
+}
+.footer__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer__nav-counter {
+  display: flex;
+  align-items: center;
+}
+.footer__nav-btns {
+  display: flex;
+}
+.footer__nav-btn {
+  font-size: 14px;
+  border: none;
+  outline: 1.6px solid #b8b8b8;
+  border-radius: 4px;
+  padding: 4px 8px;
+  background-color: transparent;
+  transition: 0.2s;
+}
+.footer__nav-btn-active {
+  font-size: 14px;
+  border: none;
+  outline: 1.6px solid #b8b8b8;
+  border-radius: 4px;
+  padding: 4px 8px;
+  transition: 0.2s;
+  background-color: #fbf5f5;
+  outline: 1.6px solid #4d4d4d;
+}
+.footer__nav-btn:hover {
+  cursor: pointer;
+  background-color: #fbf5f5;
+  outline: 1.6px solid #4d4d4d;
+}
+.footer__nav-btn:not(:last-child) {
+  margin-right: 14px;
+}
+.footer__nav-btn-active:not(:last-child) {
+  margin-right: 14px;
+}/*# sourceMappingURL=filter-todo.component.css.map */

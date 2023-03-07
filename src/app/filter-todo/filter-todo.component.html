@@ -1,0 +1,44 @@
+<div class="footer">
+  <div class="footer__nav">
+    <div class="footer__nav-counter">
+      <span>{{ todos.length - doneTodos.length }} tasks left</span>
+    </div>
+    <div class="footer__nav-btns">
+      <button
+        [class]="[
+          status === 'All' ? 'footer__nav-btn-active' : 'footer__nav-btn'
+        ]"
+        (click)="onSetAll()"
+      >
+        All
+      </button>
+      <button
+        [class]="[
+          status === 'Active' ? 'footer__nav-btn-active' : 'footer__nav-btn'
+        ]"
+        (click)="onSetActive()"
+      >
+        Active
+      </button>
+      <button
+        [class]="[
+          status === 'Completed' ? 'footer__nav-btn-active' : 'footer__nav-btn'
+        ]"
+        (click)="onSetCompleted()"
+      >
+        Completed
+      </button>
+    </div>
+    <div class="footer__nav-clear">
+      <span>
+        <button
+          (click)="onClearCompleted()"
+          [disabled]="doneTodos.length < 1"
+          class="footer__nav-btn"
+        >
+          Clear completed
+        </button>
+      </span>
+    </div>
+  </div>
+</div>

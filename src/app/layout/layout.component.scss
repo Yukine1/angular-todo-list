@@ -15,17 +15,18 @@
   font-size: $header-font-size;
   line-height: 1.4;
   font-weight: 100;
-  padding: $default-padding;
+  padding: $header-padding;
 }
 
 .main {
   min-width: 50%;
   font-weight: 100;
-  padding: $default-padding;
+  padding: $main-padding;
 }
 
 .footer {
-  padding: $default-padding;
+  min-width: 50%;
+  padding: $footer-padding;
 }
 
 .modalWindow {
