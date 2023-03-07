@@ -39,14 +39,6 @@ export class TodosService implements OnDestroy {
     this.todosChanged.next(filteredTodos);
   }
 
-  // getTodos() {
-  //   return this.todos;
-  // }
-
-  // getTodo(id: number) {
-  //   return this.todos[id];
-  // }
-
   addTodo(todoText: string | undefined | null) {
     this.todos.push({
       id: Date.now(),

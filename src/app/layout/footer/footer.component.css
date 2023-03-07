@@ -1,1 +1,7 @@
-/*# sourceMappingURL=footer.component.css.map */
+.link {
+  text-decoration: none;
+  color: #b8b8b8;
+}
+.link:active {
+  color: #4d4d4d;
+}/*# sourceMappingURL=footer.component.css.map */

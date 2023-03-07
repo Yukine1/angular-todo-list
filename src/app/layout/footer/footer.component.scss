@@ -1,1 +1,10 @@
+@import "../../../styles/abstracts/variables";
 
+.link {
+  text-decoration: none;
+  color: $todo-color-completed;
+
+  &:active {
+    color: $footer-color-primary;
+  }
+}
